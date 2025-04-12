@@ -118,7 +118,7 @@ ul#menu-main-menu a:hover {
 /* Footer Widget CSS End */
 
 /* Top Menu CSS */
-div#menu-horizontal ul {
+#menu-horizontal {
     display: flex;
     column-gap: 20px;
     list-style: none;
