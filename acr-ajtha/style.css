@@ -102,7 +102,6 @@ ul#menu-main-menu a:hover {
 .footer-area {
     display: flex;
     align-items: center;
-    align-items: baseline;
 }
 
 #menu-horizontal a {color: white;}
@@ -124,6 +123,6 @@ ul#menu-main-menu a:hover {
     list-style: none;
     justify-content: center;
     text-transform: capitalize;
-    background-color: #0A0A0A;
+    background-color: #222;
     padding: 10px;
 }
