@@ -1,0 +1,128 @@
+/*
+Theme Name: ACR Techjoss
+Theme URI: amreshroy.com/themes/acr-ajtha
+Author: Amresh
+Author URI: amreshroy.com
+Description: Custom WordPress Theme for Online Shop
+Version: 1.0
+Tages: blog, shop, 
+Text Domain: ajtha
+*/
+
+h1.heading {
+    font-family: "Arial Black";
+    width: 700px;
+    margin: auto;
+    margin-bottom: 70px;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #ccc;
+}
+
+h3.tagline{
+    font-family: Arial;
+    margin:auto;
+    font-size: 18px;
+    margin-top: 50px;
+    margin-bottom: 15px;
+    width: 700px;
+    text-align: center;
+}
+
+h2.post-title {
+    margin-bottom: 30px;
+}
+
+.post {
+    margin-bottom: 50px;
+}
+
+.post p{
+    font-family: "Helvetica Neue";
+    line-height: 1.7em;
+    font-size: 18px;
+}
+
+.post p img{
+    max-width: 100%;
+    height: auto;
+}
+
+.post .row:nth-child(2) {
+    padding-bottom: 50px;
+    border-bottom: 1px solid #ccc;
+
+}
+
+.post:last-child .row:nth-child(2){
+    border-bottom:none;
+}
+
+.footer{
+    padding-bottom: 10px;
+    padding-top: 10px;
+    background-color: #222;
+    color:#ccc;
+}
+
+.tags li{
+    color: #3D9970;
+}
+
+/* Footer Widget Menu CSS Start */
+ul#menu-main-menu {
+    text-decoration: none;
+    display: flex;
+    column-gap: 20px;
+    padding: 10px;
+    justify-content: end;
+    align-items: center;
+    margin-bottom: 0px;
+}
+
+#menu-main-menu li.menu-item {
+    list-style: none;
+}
+
+#menu-main-menu li.menu-item a {
+    color: white;
+    text-transform: capitalize;
+}
+
+ul#menu-main-menu a:hover {
+    color: coral;
+    text-decoration: none;
+}
+/* Footer Menu CSS End */
+
+/* Footer Widget CSS Start */
+.copyright p {
+    margin-bottom: 0px;
+}
+
+.footer-area {
+    display: flex;
+    align-items: center;
+}
+
+#menu-horizontal a {color: white;}
+
+#menu-horizontal a:hover {
+    text-decoration: none;
+    color: coral;
+}
+
+.copyright p {
+    color: white;
+}
+/* Footer Widget CSS End */
+
+/* Top Menu CSS */
+#menu-horizontal {
+    display: flex;
+    column-gap: 20px;
+    list-style: none;
+    justify-content: center;
+    text-transform: capitalize;
+    background-color: #222;
+    padding: 10px;
+}
