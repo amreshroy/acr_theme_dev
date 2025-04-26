@@ -126,3 +126,10 @@ ul#menu-main-menu a:hover {
     background-color: #222;
     padding: 10px;
 }
+
+.page-header{
+    background-position: center;
+    background-size: cover;
+    margin-bottom:30px;
+    padding:170px 0px;
+}
