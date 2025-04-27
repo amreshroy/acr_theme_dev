@@ -1,10 +1,10 @@
 <?php
-/**
-Template Name: Simple Page with Header 
+/*
+*Template Name: Simple Page with Header 
 */
 get_header(); ?>
 <body <?php body_class(); ?>>
-<?php get_template_part("hero-page"); ?>
+<?php get_template_part("/template-parts/simple-page-header/hero-page"); ?>
     <?php while (have_posts()):
     the_post(); ?>
     <div class="post" <?php post_class(); ?>>
