@@ -3,6 +3,7 @@ function ajtha_bootstraping(){
     load_theme_textdomain("ajtha");
     add_theme_support("post-thumbnails");
     add_theme_support("title-tag");
+    add_theme_support("custom-header");
     register_nav_menu("topmenu", __("Top Menu", "ajtha"));
     register_nav_menu("footermenu", __("Footer Menu", "ajtha"));
 }
@@ -63,13 +64,27 @@ function ajtha_menu_item_class( $classes, $item ) {
 add_filter("nav_menu_css_class", "ajtha_menu_item_class", 10, 2 );
 // style for page header image
 function hero_page_feature_img() {
-if (is_page()) {
-    $ajtha_feat_image = get_the_post_thumbnail_url(null, "large");
-} ?>
-<style>
-    .page-header{
-        background-image: url(<?php echo $ajtha_feat_image; ?>);
+    if (is_page()) {
+        $ajtha_feat_image = get_the_post_thumbnail_url(null, "large");
+        ?>
+        <style>
+            .page-header{
+                background-image: url(<?php echo $ajtha_feat_image; ?>);
+            }
+        </style> <?php
     }
-</style> <?php
+    if (is_front_page()) {
+        if (current_theme_supports("custom-header")){
+        ?>
+        <style>
+            .header{
+                background-image: url("<?php echo header_image(); ?>");
+                background-size: cover;
+                margin-bottom: 20px;
+            }
+        </style>
+        <?php
+        }
+    }
 }
 add_action("wp_head", "hero_page_feature_img");
