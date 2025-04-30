@@ -61,3 +61,15 @@ function ajtha_menu_item_class( $classes, $item ) {
     return $classes;
 }
 add_filter("nav_menu_css_class", "ajtha_menu_item_class", 10, 2 );
+// style for page header image
+function hero_page_feature_img() {
+if (is_page()) {
+    $ajtha_feat_image = get_the_post_thumbnail_url(null, "large");
+} ?>
+<style>
+    .page-header{
+        background-image: url(<?php echo $ajtha_feat_image; ?>);
+    }
+</style> <?php
+}
+add_action("wp_head", "hero_page_feature_img");
