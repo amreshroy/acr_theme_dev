@@ -3,7 +3,11 @@ function ajtha_bootstraping(){
     load_theme_textdomain("ajtha");
     add_theme_support("post-thumbnails");
     add_theme_support("title-tag");
-    add_theme_support("custom-header");
+    $ajtha_custom_header_details = array(
+        'header-text'   => true,
+        'default-text-color'    => '#222',
+    );
+    add_theme_support("custom-header", $ajtha_custom_header_details);
     register_nav_menu("topmenu", __("Top Menu", "ajtha"));
     register_nav_menu("footermenu", __("Footer Menu", "ajtha"));
 }
@@ -81,6 +85,15 @@ function hero_page_feature_img() {
                 background-image: url("<?php echo header_image(); ?>");
                 background-size: cover;
                 margin-bottom: 20px;
+            }
+            .header h1.heading a, h3.tagline {
+                color:#<?php echo get_header_textcolor(); ?>;
+                <?php if(!display_header_text()){
+                    echo "display: none;";
+                }?> 
+            }
+            h1.heading {
+                border-bottom: none;
             }
         </style>
         <?php
