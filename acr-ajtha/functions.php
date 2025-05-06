@@ -92,9 +92,6 @@ function hero_page_feature_img() {
                     echo "display: none;";
                 }?> 
             }
-            h1.heading {
-                border-bottom: none;
-            }
         </style>
         <?php
         }
